@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Micro P2P Chat</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+
+  <script type="text/javascript" src="/lib/p2pt.umd.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="user-section">
+    <label class="col-md-4 control-label" for="user-name">Name</label>
+    <div class="col-md-4">
+      <input id="user-name" name="user-name" type="text" placeholder="" class="form-control input-md">
+      <span class="help-block">your name</span>
+      <button id="save-user-name" name="save-user-name" class="btn btn-success">Next</button>
+    </div>
+  </div>
+
+  <div id="room-section">
+    <label class="col-md-4 control-label" for="create-new-room">Room</label>
+    <div class="col-md-8">
+      <button id="create-new-room" name="create-new-room" class="btn btn-success">Create New Room</button>
+      <button id="join-a-room" name="join-a-room" class="btn btn-danger">Join a Room</button>
+    </div>
+  </div>
+
+  <div id="join-room-section">
+    <label class="col-md-4 control-label" for="room-id-to-join">Join a Room</label>
+    <div class="col-md-4">
+      <input id="room-id-to-join" name="room-id-to-join" type="text" placeholder="123456" class="form-control input-md">
+      <span class="help-block">enter room id</span>
+      <button id="access-room" class="btn btn-danger">Access</button>
+    </div>
+  </div>
+
+  <div id="chat-section">
+    <h3>Room id: <span id="room-id-connected"></span></h3>
+    <div id="chat-frame" class="col-sm-3 col-sm-offset-4 frame">
+
+      <ul id="message-list">
+      </ul>
+    </div>
+
+    <div class="msj-rta macro sender">
+      <div class="text text-r">
+        <input id="my-message" placeholder="Type a message">
+        <button id="send-message" name="send-message" class="btn btn-success">Send</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="/js/controller.js"></script>
+</body>
